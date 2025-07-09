@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Service Cloud Maturity Model for Large Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Salesforce Service Cloud Maturity Model for Large Media Enterprises</h1>
+            <p class="subtitle">A strategic framework to elevate your Contact Center and deliver exceptional customer experiences in Broadcast, Publishing, and Sports Media.</p>
+        </div>
+        <div class="hero-visual">
+            </div>
+    </header>
+
+    <main>
+        <section class="introduction card">
+            <h2>Chart Your Path to Service Excellence</h2>
+            <p>This model helps large media organizations (Broadcast, Publishing, and Sports) assess their current Salesforce Service Cloud maturity, specifically focusing on how they empower their **contact center teams** and leverage technology to optimize critical KPIs like **Average Handle Time (AHT)** and **Customer Satisfaction (CSAT)**.</p>
+            <p>Each level represents increasing sophistication in leveraging Service Cloud to deliver truly outstanding customer and advertiser experiences, from foundational case management to AI-powered, proactive engagement and "Agentforce" capabilities.</p>
+        </section>
+
+        <section class="maturity-table card">
+            <h2>Your Service Cloud Journey (Click for Deep Dive)</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Maturity Name</th>
+                            <th>Key Focus Areas</th>
+                            <th>Direct Impact on KPIs & Agent Empowerment</th>
+                        </tr>
+                    </thead>
+                    <tbody id="maturityTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="self-assessment card">
+            <h2>Self-Assessment: Where Do You Stand?</h2>
+            <p>Answer the following questions to get an indicative maturity level for your media contact center. Be honest about your current state!</p>
+            <form id="assessmentForm">
+                <div class="question-group">
+                    <p><strong>1. How do your agents access customer interaction history and relevant information?</strong></p>
+                    <label><input type="radio" name="q1" value="1"> They often search multiple systems or rely on memory.</label><br>
+                    <label><input type="radio" name="q1" value="2"> Basic CRM provides some history, but often incomplete.</label><br>
+                    <label><input type="radio" name="q1" value="3"> A unified desktop gives a good view, but agent still needs to search for knowledge.</label><br>
+                    <label><input type="radio" name="q1" value="4"> Comprehensive 360-degree view with AI-powered suggestions for agents.</label><br>
+                    <label><input type="radio" name="q1" value="5"> Predictive insights and next-best-actions are proactively presented to agents.</label><br>
+                </div>
+
+                <div class="question-group">
+                    <p><strong>2. What self-service options are available to your audience/advertisers?</strong></p>
+                    <label><input type="radio" name="q2" value="1"> Only a generic "Contact Us" page or basic FAQ.</label><br>
+                    <label><input type="radio" name="q2" value="2"> Basic online FAQs, but not integrated with case management.</label><br>
+                    <label><input type="radio" name="q2" value="3"> A customer portal/community for case logging and simple knowledge access.</label><br>
+                    <label><input type="radio" name="q2" value="4"> Advanced portal with personalized content, troubleshooting guides, and basic chatbots.</label><br>
+                    <label><input type="radio" name="q2" value="5"> AI-powered chatbots handle most routine inquiries, and anticipate needs, offering proactive solutions.</label><br>
+                </div>
+
+                <div class="question-group">
+                    <p><strong>3. How are new service channels (e.g., social, messaging) adopted and integrated?</strong></p>
+                    <label><input type="radio" name="q3" value="1"> We primarily use phone and email, other channels are separate silos.</label><br>
+                    <label><input type="radio" name="q3" value="2"> Limited digital channels (e.g., basic chat) but not fully integrated into a single agent view.</label><br>
+                    <label><input type="radio" name="q3" value="3"> Several channels are active (phone, email, chat, some social) but agents might toggle between systems.</label><br>
+                    <label><input type="radio" name="q3" value="4"> Omnichannel support with a unified agent desktop, intelligent routing across all channels.</label><br>
+                    <label><input type="radio" name="q3" value="5"> Seamless omnichannel experience with AI-driven deflection and intelligent hand-offs between channels/bots/agents.</label><br>
+                </div>
+
+                <div class="question-group">
+                    <p><strong>4. To what extent is AI/automation used to support your contact center agents?</strong></p>
+                    <label><input type="radio" name="q4" value="1"> Minimal to no automation or AI for agents.</label><br>
+                    <label><input type="radio" name="q4" value="2"> Basic automation (e.g., auto-assignment) and agent templates.</label><br>
+                    <label><input type="radio" name="q4" value="3"> Agents use macros and quick text; basic AI might suggest knowledge articles.</label><br>
+                    <label><input type="radio" name="q4" value="4"> AI assists with case summaries, sentiment analysis, and next-best-action recommendations.</label><br>
+                    <label><input type="radio" name="q4" value="5"> AI automates many routine tasks, proactively identifies solutions, and empowers agents to focus on complex, high-value interactions.</label><br>
+                </div>
+
+                <button type="submit">Assess My Maturity</button>
+            </form>
+            <div id="assessmentResult" class="result-box"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <div id="maturityModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalLevelName"></h3>
+            <p><strong>Level Description:</strong> <span id="modalCharacteristics"></span></p>
+            <p><strong>Knowledge Management:</strong> <span id="modalKnowledge"></span></p>
+            <p><strong>Channel Adoption:</strong> <span id="modalChannels"></span></p>
+            <p><strong>Agent Experience / Efficiency:</strong> <span id="modalAgentExperience"></span></p>
+            <p><strong>Self-Service:</strong> <span id="modalSelfService"></span></p>
+            <p><strong>Impact on KPIs & Agent Empowerment:</strong> <span id="modalKpisImpact"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
